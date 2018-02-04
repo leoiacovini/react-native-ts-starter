@@ -1,6 +1,6 @@
 import { Navigation } from 'react-native-navigation'
 import { withProvider } from './redux'
-import { Home } from './modules/sample/screens/Home'
+import { Home } from 'src/modules/sample/screens/Home'
 
 const Screens = [
     Home

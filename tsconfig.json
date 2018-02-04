@@ -8,6 +8,7 @@
         "noUnusedLocals": true,
         "allowJs": true,
         "baseUrl": ".",
+        "rootDir": ".",
         "allowSyntheticDefaultImports": true,
         "lib": [
             "dom",

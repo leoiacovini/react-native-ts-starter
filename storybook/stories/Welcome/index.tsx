@@ -1,9 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
+import React from 'react'; 
+import { View, Text, StyleSheet } from 'react-native';
 
-export default class Welcome extends React.Component {
-  styles = {
+interface Props {
+  showApp: () => void
+}
+
+export default class Welcome extends React.Component<Props> {
+  styles = StyleSheet.create({
     wrapper: {
       flex: 1,
       padding: 24,
@@ -18,7 +21,7 @@ export default class Welcome extends React.Component {
       marginBottom: 10,
       lineHeight: 18,
     },
-  };
+  });
 
   showApp(event) {
     event.preventDefault();
@@ -43,11 +46,3 @@ export default class Welcome extends React.Component {
     );
   }
 }
-
-Welcome.defaultProps = {
-  showApp: null,
-};
-
-Welcome.propTypes = {
-  showApp: PropTypes.func,
-};

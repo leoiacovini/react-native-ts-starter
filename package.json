@@ -37,10 +37,34 @@
     "react-dom": "16.2.0",
     "react-native-typescript-transformer": "^1.2.3",
     "react-test-renderer": "16.2.0",
+    "ts-jest": "^22.0.3",
+    "ts-lint": "^4.5.1",
     "typescript": "^2.7.1"
   },
   "jest": {
     "preset": "react-native",
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "e2e"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "mapCoverage": true,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "moduleNameMapper": {
+      ".+\\.(png)$": "jest-static-stubs/$1"
+    },
     "modulePaths": [
       "<rootDir>"
     ]

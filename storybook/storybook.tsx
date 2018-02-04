@@ -1,3 +1,5 @@
+declare var module: any
+
 /* eslint-disable global-require */
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
